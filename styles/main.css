@@ -241,6 +241,10 @@ input[type=button] {
   zoom: 1;
 }
 
+:root {
+  --gradient: linear-gradient(60deg, #ddf4ff, #fce0de, #edfbe4);
+}
+
 .header {
   height: 100vh;
   -webkit-box-align: center;
@@ -248,10 +252,9 @@ input[type=button] {
           align-items: center;
   text-align: center;
   background-image: var(--gradient);
-  background-repeat: no-repeat;
-  background-size: 200vh;
-  -webkit-animation: bg-animation 1s infinite alternate;
-          animation: bg-animation 1s infinite alternate;
+  background-size: 400%;
+  -webkit-animation: bg-animation 5s infinite alternate;
+          animation: bg-animation 5s infinite alternate;
 }
 
 @-webkit-keyframes bg-animation {
@@ -273,14 +276,60 @@ input[type=button] {
 }
 
 #logo {
-  margin-top: 50%;
+  position: absolute;
+  margin-top: 310px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-:root {
-  --gradient: linear-gradient(45deg, #ddf4ff, #fce0de, #edfbe4);
+#logoText {
+  position: absolute;
+  margin-top: 350px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.circle {
+  position: absolute;
+  margin-top: 150px;
+  width: 350px;
+  height: 350px;
+  background-image: var(--gradient);
+  background-size: 300%;
+  -webkit-animation: circle-animation 2s infinite alternate;
+          animation: circle-animation 2s infinite alternate;
+  border-radius: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+          box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+}
+
+@-webkit-keyframes circle-animation {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+@keyframes circle-animation {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
 }
 
 p {
+  font-size: 14px;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
 }

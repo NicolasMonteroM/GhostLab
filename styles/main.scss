@@ -18,11 +18,8 @@ $font: "Raleway", sans-serif;
 @import "table";
 @import "input";
 
-:root {
-    --gradient: linear-gradient(45deg, #ddf4ff, #fce0de, #edfbe4);
-}
-
 p {
+    font-size: 14px;
     font-family: $font;
     font-weight: 300;
 }
