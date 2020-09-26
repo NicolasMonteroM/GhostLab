@@ -17,6 +17,8 @@ $font: "Raleway", sans-serif;
 @import "btn";
 @import "table";
 @import "input";
+@import "cascade";
+@import "about";
 
 p {
     font-size: 14px;
@@ -33,6 +35,11 @@ a {
 h2 {
     font-family: $font;
     font-weight: 700;
+}
+
+body{
+
+    background-color: #000000;
 }
 
 .row {

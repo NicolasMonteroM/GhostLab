@@ -1,0 +1,32 @@
+.cascade {
+    position: relative;
+    top: -10vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.drop {
+    padding-left: 5vw;
+}
+
+.tallDrop {
+    width: 30px;
+    height: auto;
+}
+
+.shortDrop {
+    padding-top: 39px;
+    width: 30px;
+    height: auto;
+}
+
+@media only screen and(max-width: 500px) {
+    .shortDrop {
+        width: 20px;
+    }
+
+    .tallDrop {
+        width: 20px;
+    }
+}
