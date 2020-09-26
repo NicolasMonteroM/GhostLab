@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap");
+
+$text-color1: #000000;
+$text-color2: #ffffff;
+$blue: #31a8ff;
+
+$normal-spacing: 16px;
+$font: "Raleway", sans-serif;
+
+@import "reset";
+@import "base";
+@import "banner";
+@import "card";
+@import "circle";
+@import "footer";
+@import "nav";
+@import "btn";
+@import "table";
+@import "input";
+
+:root {
+    --gradient: linear-gradient(45deg, #ddf4ff, #fce0de, #edfbe4);
+}
+
+p {
+    font-family: $font;
+    font-weight: 300;
+}
+
+a {
+    font-family: $font;
+    font-weight: 700;
+    color: $text-color1;
+}
+
+h2 {
+    font-family: $font;
+    font-weight: 700;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+
+    &__col {
+        padding: 20px;
+
+        &--2 {
+            width: 50%;
+        }
+
+        &--3 {
+            width: 33.3%;
+        }
+
+        &--5 {
+            width: 20%;
+        }
+    }
+}
