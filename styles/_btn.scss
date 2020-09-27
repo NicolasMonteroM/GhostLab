@@ -1,0 +1,29 @@
+:root {
+    --btnGradient: linear-gradient(60deg, #636363,  #363636);
+}
+
+.btn {
+    font-size: 14px;
+    font-family: $font;
+    background-color: darken(#000000, 6%);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    color: $text-color2;
+    font-weight: 900;
+
+    &:hover {
+        background-image: var(--btnGradient);
+        font-weight: 900;
+    }
+
+    background-size: 200%;
+    animation: bg-animation 1s infinite alternate;
+}
+
+@media only screen and(max-width: 800px){
+
+    .btn{font-size: 12px;}
+}

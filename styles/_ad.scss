@@ -6,8 +6,9 @@
     background-image: url("../images/figuresAd.jpg");
     height: 50vh;
     left:0;
+    align-content: center;
     text-align: center;
     align-items: center;
     justify-content: center;
-
+    flex-direction: column;
 }
