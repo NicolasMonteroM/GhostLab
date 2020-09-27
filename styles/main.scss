@@ -8,7 +8,6 @@ $normal-spacing: 16px;
 $font: "Raleway", sans-serif;
 
 @import "reset";
-@import "base";
 @import "banner";
 @import "card";
 @import "circle";
@@ -19,6 +18,7 @@ $font: "Raleway", sans-serif;
 @import "input";
 @import "cascade";
 @import "about";
+@import "ad";
 
 p {
     font-size: 14px;
@@ -42,12 +42,13 @@ body {
     background-color: #000000;
 }
 
+/*
 .row {
     display: flex;
     justify-content: center;
 
     &__col {
-        padding: 20px;
+        padding: 30px;
 
         &--2 {
             width: 50%;
@@ -61,7 +62,7 @@ body {
             width: 20%;
         }
     }
-}
+}*/
 
 @media only screen and(max-width: 800px) {
    

@@ -1,22 +1,61 @@
 .about {
     position: relative;
     top: -180px;
-    
+
     p,
     h2 {
         color: $text-color2;
     }
 
     #aboutLogo {
-        width: 300px;
-        padding-bottom: 80px;
+        width: 250px;
+        padding-bottom: 60px;
+    }
+
+    #aboutText {
+        padding-right: 15vw;
     }
 }
-
+/*
 .gallery {
+
+
+    position: relative;
     height: 500px;
+    width: 40vw;
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: flex-end;
+    animation-name: galleryFade 5s infinite alternate;
+}*/
+
+#gallery1 {
+    display:none;
+    .top,
+    .bottom {
+        object-fit: cover;
+    }
+     position:absolute;
+  left:0;
+}
+
+
+@keyframes galleryFade {
+    0% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.gallery img.top {
+    animation-name: galleryFade 5s infinite alternate;
+    transform: ease-in-out;
 }

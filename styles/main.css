@@ -480,12 +480,76 @@ input[type=button] {
 }
 
 .about #aboutLogo {
-  width: 300px;
-  padding-bottom: 80px;
+  width: 250px;
+  padding-bottom: 60px;
 }
 
+.about #aboutText {
+  padding-right: 15vw;
+}
+
+/*
 .gallery {
-  height: 500px;
+
+
+    position: relative;
+    height: 500px;
+    width: 40vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    animation-name: galleryFade 5s infinite alternate;
+}*/
+#gallery1 {
+  display: none;
+  position: absolute;
+  left: 0;
+}
+
+#gallery1 .top,
+#gallery1 .bottom {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@-webkit-keyframes galleryFade {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes galleryFade {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.gallery img.top {
+  -webkit-animation-name: galleryFade 5s infinite alternate;
+          animation-name: galleryFade 5s infinite alternate;
+  -webkit-transform: ease-in-out;
+          transform: ease-in-out;
+}
+
+.ad {
   background-size: cover;
   background-position: center;
   display: -webkit-box;
@@ -494,6 +558,16 @@ input[type=button] {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  background-image: url("../images/figuresAd.jpg");
+  height: 50vh;
+  left: 0;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 p {
@@ -518,31 +592,27 @@ body {
   background-color: #000000;
 }
 
+/*
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
+    display: flex;
+    justify-content: center;
 
-.row__col {
-  padding: 20px;
-}
+    &__col {
+        padding: 30px;
 
-.row__col--2 {
-  width: 50%;
-}
+        &--2 {
+            width: 50%;
+        }
 
-.row__col--3 {
-  width: 33.3%;
-}
+        &--3 {
+            width: 33.3%;
+        }
 
-.row__col--5 {
-  width: 20%;
-}
-
+        &--5 {
+            width: 20%;
+        }
+    }
+}*/
 @media only screen and (max-width: 800px) {
   p {
     font-size: 12px;
