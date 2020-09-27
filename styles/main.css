@@ -294,20 +294,34 @@ input[type=button] {
 }
 
 #scrollText {
+  display: none;
   position: absolute;
-  margin-top: 80vh;
+  margin-top: 75vh;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   #logo {
     width: 140px;
-    margin-top: 320px;
+    margin-top: 285px;
   }
   #logoText {
-    margin-top: 355px;
+    margin-top: 310px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #logo {
+    width: 140px;
+    margin-top: 275px;
+  }
+  #logoText {
+    margin-top: 300px;
+  }
+  #scrollText {
+    display: none;
   }
 }
 
@@ -364,7 +378,6 @@ input[type=button] {
 
 .cascade {
   position: relative;
-  top: -10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,17 +395,63 @@ input[type=button] {
 }
 
 .tallDrop {
-  width: 30px;
+  position: relative;
+  width: 27px;
   height: auto;
+  -webkit-animation: tallDrop-animation 7s infinite alternate;
+          animation: tallDrop-animation 7s infinite alternate;
+  -webkit-transition: ease-in;
+  transition: ease-in;
 }
 
 .shortDrop {
+  position: relative;
   padding-top: 39px;
-  width: 30px;
+  width: 27px;
   height: auto;
+  -webkit-animation: shortDrop-animation 7s infinite alternate;
+          animation: shortDrop-animation 7s infinite alternate;
+  -webkit-transition: ease-in;
+  transition: ease-in;
 }
 
-@media only screen and (max-width: 500px) {
+@-webkit-keyframes tallDrop-animation {
+  0% {
+    top: -15vh;
+  }
+  100% {
+    top: -19vh;
+  }
+}
+
+@keyframes tallDrop-animation {
+  0% {
+    top: -15vh;
+  }
+  100% {
+    top: -19vh;
+  }
+}
+
+@-webkit-keyframes shortDrop-animation {
+  0% {
+    top: -22vh;
+  }
+  100% {
+    top: -16vh;
+  }
+}
+
+@keyframes shortDrop-animation {
+  0% {
+    top: -22vh;
+  }
+  100% {
+    top: -16vh;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   .shortDrop {
     width: 20px;
   }
@@ -400,7 +459,13 @@ input[type=button] {
     width: 20px;
   }
   .cascade {
-    top: -80px;
+    top: 5vh;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .cascade {
+    top: 6vh;
   }
 }
 
@@ -448,5 +513,11 @@ body {
 
 .row__col--5 {
   width: 20%;
+}
+
+@media only screen and (max-width: 800px) {
+  p {
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

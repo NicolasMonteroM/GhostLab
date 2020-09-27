@@ -1,6 +1,5 @@
 .cascade {
     position: relative;
-    top: -10vh;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -11,17 +10,41 @@
 }
 
 .tallDrop {
-    width: 30px;
+    position: relative;
+    width: 27px;
     height: auto;
+    animation: tallDrop-animation 7s infinite alternate;
+    transition: ease-in;
 }
 
 .shortDrop {
+    position: relative;
     padding-top: 39px;
-    width: 30px;
+    width: 27px;
     height: auto;
+    animation: shortDrop-animation 7s infinite alternate;
+    transition: ease-in;
 }
 
-@media only screen and(max-width: 500px) {
+@keyframes tallDrop-animation {
+    0% {
+        top: -15vh;
+    }
+    100% {
+        top: -19vh;
+    }
+}
+
+@keyframes shortDrop-animation {
+    0% {
+        top: -22vh;
+    }
+    100% {
+        top: -16vh;
+    }
+}
+
+@media only screen and(max-width: 800px) {
     .shortDrop {
         width: 20px;
     }
@@ -29,9 +52,14 @@
     .tallDrop {
         width: 20px;
     }
+    .cascade {
+        top: 5vh;
+    }
+}
 
-    .cascade{
-        top:  -80px;
+@media only screen and(max-width: 350px) {
 
+    .cascade {
+        top: 6vh;
     }
 }
