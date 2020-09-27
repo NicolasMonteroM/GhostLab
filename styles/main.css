@@ -470,11 +470,18 @@ input[type=button] {
 }
 
 .about {
-  top: -200px;
+  position: relative;
+  top: -180px;
 }
 
-.about p {
+.about p,
+.about h2 {
   color: #ffffff;
+}
+
+.about #aboutLogo {
+  width: 300px;
+  padding-bottom: 80px;
 }
 
 .gallery {
@@ -502,6 +509,7 @@ a {
 }
 
 h2 {
+  font-size: 20px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }

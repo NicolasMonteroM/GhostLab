@@ -1,20 +1,22 @@
 .about {
-
-    top: -200px;
-
-    p{
-     color: $text-color2; 
+    position: relative;
+    top: -180px;
+    
+    p,
+    h2 {
+        color: $text-color2;
     }
 
+    #aboutLogo {
+        width: 300px;
+        padding-bottom: 80px;
+    }
 }
 
-.gallery{
+.gallery {
     height: 500px;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: flex-end;
 }
-
-
-
