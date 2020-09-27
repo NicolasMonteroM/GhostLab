@@ -398,8 +398,8 @@ input[type=button] {
   position: relative;
   width: 27px;
   height: auto;
-  -webkit-animation: tallDrop-animation 7s infinite alternate;
-          animation: tallDrop-animation 7s infinite alternate;
+  -webkit-animation: tallDrop-animation 6s infinite alternate;
+          animation: tallDrop-animation 6s infinite alternate;
   -webkit-transition: ease-in;
   transition: ease-in;
 }
@@ -409,8 +409,8 @@ input[type=button] {
   padding-top: 39px;
   width: 27px;
   height: auto;
-  -webkit-animation: shortDrop-animation 7s infinite alternate;
-          animation: shortDrop-animation 7s infinite alternate;
+  -webkit-animation: shortDrop-animation 6s infinite alternate;
+          animation: shortDrop-animation 6s infinite alternate;
   -webkit-transition: ease-in;
   transition: ease-in;
 }
@@ -467,6 +467,26 @@ input[type=button] {
   .cascade {
     top: 6vh;
   }
+}
+
+.about {
+  top: -200px;
+}
+
+.about p {
+  color: #ffffff;
+}
+
+.gallery {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 p {
