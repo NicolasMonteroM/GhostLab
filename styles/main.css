@@ -295,7 +295,7 @@ input[type=button] {
 
 #scrollText {
   position: absolute;
-  margin-top: 77vh;
+  margin-top: 80vh;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -303,7 +303,7 @@ input[type=button] {
 
 @media only screen and (max-width: 500px) {
   #logo {
-    width: 180px;
+    width: 140px;
     margin-top: 320px;
   }
   #logoText {
@@ -346,10 +346,18 @@ input[type=button] {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   .circle {
-    width: 300px;
-    height: 300px;
+    width: 220px;
+    height: 220px;
+    margin-top: 180px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .circle {
+    width: 200px;
+    height: 200px;
     margin-top: 180px;
   }
 }
@@ -390,6 +398,9 @@ input[type=button] {
   }
   .tallDrop {
     width: 20px;
+  }
+  .cascade {
+    top: -80px;
   }
 }
 
