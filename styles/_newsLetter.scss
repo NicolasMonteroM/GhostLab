@@ -1,9 +1,23 @@
-.newsLetter{
-
-    height: 20vh;
+.newsLetter {
+    padding-top: 10vh;
+    text-align: center;
+    align-items: center;
     align-content: center;
     justify-content: center;
     color: $text-color2;
-    height: 80vh;
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+
+    &__content {
+        align-self: center;
+        
+    }
+}
+
+#inputBtn{
+
+    border-color: white;
+    border: 1px;
 
 }

@@ -467,9 +467,9 @@ input[type=button] {
   padding-bottom: 13px;
   padding-left: 30px;
   padding-right: 30px;
-  border: none;
   color: #000000;
   font-weight: 300;
+  width: 300px;
 }
 
 .cascade {
@@ -676,14 +676,35 @@ input[type=button] {
 }
 
 .newsLetter {
-  height: 20vh;
+  padding-top: 10vh;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   color: #ffffff;
-  height: 80vh;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.newsLetter__content {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#inputBtn {
+  border-color: white;
+  border: 1px;
 }
 
 p {
