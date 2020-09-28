@@ -10,7 +10,33 @@
     left: 50%;
     transform: translate(-50%);
     box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
-   
+}
+
+.description {
+    padding-top: 40vh;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    p,
+    h2 {
+        color: $text-color2;
+    }
+
+    #intro {
+        position: relative;
+        height: 200px;
+    }
+
+    #product {
+        position: relative;
+        background-image: none;
+        background-color: black;
+    }
 }
 
 @keyframes circle-animation {
@@ -22,21 +48,18 @@
     }
 }
 
-@media only screen and(max-width: 800px){
-
-    .circle{
+@media only screen and(max-width: 800px) {
+    .circle {
         width: 220px;
-        height: 220px; 
+        height: 220px;
         margin-top: 180px;
     }
-
 }
 
-@media only screen and(max-width: 350px){
-
-    .circle{
+@media only screen and(max-width: 350px) {
+    .circle {
         width: 200px;
-        height: 200px; 
+        height: 200px;
         margin-top: 180px;
     }
 }

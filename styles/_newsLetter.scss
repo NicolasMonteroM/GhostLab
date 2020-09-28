@@ -1,5 +1,4 @@
 .newsLetter {
-    padding-top: 10vh;
     text-align: center;
     align-items: center;
     align-content: center;
@@ -7,17 +6,9 @@
     color: $text-color2;
     height: 60vh;
     display: flex;
-    align-items: flex-end;
+    padding-top: 20vh;
 
     &__content {
         align-self: center;
-        
     }
-}
-
-#inputBtn{
-
-    border-color: white;
-    border: 1px;
-
 }

@@ -13,8 +13,8 @@
     position: relative;
     width: 27px;
     height: auto;
-    animation: tallDrop-animation 6s infinite alternate;
-    transition: ease-in;
+    animation: tallDrop-animation 10s infinite alternate;
+    transition: ease-in-out;
 }
 
 .shortDrop {
@@ -22,8 +22,8 @@
     padding-top: 39px;
     width: 27px;
     height: auto;
-    animation: shortDrop-animation 6s infinite alternate;
-    transition: ease-in;
+    animation: shortDrop-animation 10s infinite alternate;
+    transition: ease-in-out;
 }
 
 @keyframes tallDrop-animation {
