@@ -574,7 +574,7 @@ input[type=button] {
 .about {
   position: relative;
   top: -150px;
-  padding-bottom: 250px;
+  padding-bottom: 650px;
 }
 
 .about p,
@@ -586,11 +586,11 @@ input[type=button] {
   padding-right: 15vw;
 }
 
-#gallery1 {
+#gallery1, #gallery2, #gallery3 {
   position: relative;
 }
 
-#gallery1 img {
+#gallery1 img, #gallery2 img, #gallery3 img {
   -webkit-filter: grayscale(90%);
           filter: grayscale(90%);
   padding-top: 50px;
@@ -605,7 +605,7 @@ input[type=button] {
   transition: opacity 1s ease-in-out;
 }
 
-#gallery1 img.top {
+#gallery1 img.top, #gallery2 img.top, #gallery3 img.top {
   -webkit-animation-name: galleryFade;
           animation-name: galleryFade;
   -webkit-animation-timing-function: ease-in-out;
@@ -616,6 +616,14 @@ input[type=button] {
           animation-duration: 3s;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
+}
+
+#gallery2 {
+  top: 250px;
+}
+
+#gallery3 {
+  top: 70px;
 }
 
 @-webkit-keyframes galleryFade {

@@ -1,7 +1,7 @@
 .about {
     position: relative;
     top: -150px;
-    padding-bottom: 250px;
+    padding-bottom: 650px;
 
     p,
     h2 {
@@ -13,7 +13,7 @@
     }
 }
 
-#gallery1 {
+#gallery1, #gallery2, #gallery3{
 
     position: relative;
 
@@ -39,6 +39,15 @@
             animation-direction: alternate;
         }
     }
+}
+
+#gallery2 {
+    top: 250px;
+}
+
+#gallery3{
+    top: 70px;
+
 }
 
 @keyframes galleryFade {
