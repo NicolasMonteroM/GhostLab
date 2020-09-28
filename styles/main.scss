@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&display=swap");
 
-$text-color1: #000000;
-$text-color2: #ffffff;
-$blue: #31a8ff;
+$text-color1: black;
+$text-color2: white;
 
-$normal-spacing: 16px;
 $font: "Raleway", sans-serif;
 
 @import "reset";
@@ -31,6 +29,12 @@ a {
     font-family: $font;
     font-weight: 700;
     color: $text-color1;
+}
+
+h1{
+    font-size: 24px;
+    font-family: $font;
+    font-weight: 700;
 }
 
 h2 {
@@ -65,12 +69,11 @@ body {
 }
 
 @media only screen and(max-width: 800px) {
-   
     p {
         font-size: 12px;
+        
     }
 }
 
 @media only screen and(max-width: 350px) {
-    
 }

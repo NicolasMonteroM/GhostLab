@@ -364,8 +364,9 @@ input[type=button] {
 }
 
 .description p,
+.description h1,
 .description h2 {
-  color: #ffffff;
+  color: white;
 }
 
 .description #intro {
@@ -377,6 +378,18 @@ input[type=button] {
   position: relative;
   background-image: none;
   background-color: black;
+}
+
+.description #title {
+  padding-top: 100px;
+  position: relative;
+  height: 200px;
+}
+
+.description #moreInfo {
+  width: 100vw;
+  position: relative;
+  padding: 30px;
 }
 
 @-webkit-keyframes circle-animation {
@@ -402,6 +415,9 @@ input[type=button] {
     width: 220px;
     height: 220px;
     margin-top: 180px;
+  }
+  #moreInfo {
+    text-align: left;
   }
 }
 
@@ -478,7 +494,7 @@ input[type=button] {
   padding-left: 30px;
   padding-right: 30px;
   border: none;
-  color: #ffffff;
+  color: white;
   font-weight: 900;
   background-size: 200%;
   -webkit-animation: bg-animation 1s infinite alternate;
@@ -504,7 +520,7 @@ input[type=button] {
   padding-bottom: 6px;
   padding-left: 30px;
   padding-right: 30px;
-  color: #000000;
+  color: black;
   font-weight: 300;
   width: 300px;
 }
@@ -615,12 +631,13 @@ input[type=button] {
 .about {
   position: relative;
   top: -150px;
-  padding-bottom: 450px;
+  padding-bottom: 650px;
 }
 
 .about p,
+.about h1,
 .about h2 {
-  color: #ffffff;
+  color: white;
 }
 
 .about #aboutText {
@@ -696,6 +713,7 @@ input[type=button] {
 @media only screen and (max-width: 800px) {
   .about {
     top: -25vh;
+    padding-bottom: 450px;
   }
   #aboutLogo {
     display: none;
@@ -718,7 +736,7 @@ input[type=button] {
   #aboutText {
     width: 100vw;
     position: relative;
-    padding: 40px;
+    padding: 30px;
   }
   .row {
     display: -webkit-box;
@@ -786,7 +804,7 @@ input[type=button] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #ffffff;
+  color: white;
   height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -809,7 +827,13 @@ p {
 a {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  color: #000000;
+  color: black;
+}
+
+h1 {
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
 }
 
 h2 {

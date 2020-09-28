@@ -23,6 +23,7 @@
     flex-direction: column;
 
     p,
+    h1,
     h2 {
         color: $text-color2;
     }
@@ -36,6 +37,18 @@
         position: relative;
         background-image: none;
         background-color: black;
+    }
+
+    #title {
+        padding-top: 100px;
+        position: relative;
+        height: 200px;
+    }
+
+    #moreInfo {
+        width: 100vw;
+        position: relative;
+        padding: 30px;
     }
 }
 
@@ -54,6 +67,10 @@
         height: 220px;
         margin-top: 180px;
     }
+
+    #moreInfo{
+        text-align: left;
+    }
 }
 
 @media only screen and(max-width: 350px) {
@@ -62,4 +79,5 @@
         height: 200px;
         margin-top: 180px;
     }
+
 }
