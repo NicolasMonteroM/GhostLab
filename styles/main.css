@@ -463,7 +463,8 @@ input[type=button] {
   font-size: 14px;
   font-family: "Raleway", sans-serif;
   background-color: #f0f0f0;
-  padding-bottom: 13px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   padding-left: 30px;
   padding-right: 30px;
   color: #000000;
@@ -572,7 +573,8 @@ input[type=button] {
 
 .about {
   position: relative;
-  top: -180px;
+  top: -150px;
+  padding-bottom: 250px;
 }
 
 .about p,
@@ -580,37 +582,40 @@ input[type=button] {
   color: #ffffff;
 }
 
-.about #aboutLogo {
-  width: 250px;
-  padding-bottom: 60px;
-}
-
 .about #aboutText {
   padding-right: 15vw;
 }
 
-/*
-.gallery {
-
-
-    position: relative;
-    height: 500px;
-    width: 40vw;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    animation-name: galleryFade 5s infinite alternate;
-}*/
 #gallery1 {
-  display: none;
-  position: absolute;
-  left: 0;
+  position: relative;
 }
 
-#gallery1 .top,
-#gallery1 .bottom {
+#gallery1 img {
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 500px;
+  width: 45vw;
+  position: absolute;
+  left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#gallery1 img.top {
+  -webkit-animation-name: galleryFade;
+          animation-name: galleryFade;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 @-webkit-keyframes galleryFade {
@@ -641,13 +646,6 @@ input[type=button] {
   100% {
     opacity: 0;
   }
-}
-
-.gallery img.top {
-  -webkit-animation-name: galleryFade 5s infinite alternate;
-          animation-name: galleryFade 5s infinite alternate;
-  -webkit-transform: ease-in-out;
-          transform: ease-in-out;
 }
 
 .ad {
@@ -735,27 +733,31 @@ body {
   background-color: #000000;
 }
 
-/*
 .row {
-    display: flex;
-    justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
-    &__col {
-        padding: 30px;
+.row__col {
+  padding: 30px;
+}
 
-        &--2 {
-            width: 50%;
-        }
+.row__col--2 {
+  width: 50%;
+}
 
-        &--3 {
-            width: 33.3%;
-        }
+.row__col--3 {
+  width: 33.3%;
+}
 
-        &--5 {
-            width: 20%;
-        }
-    }
-}*/
+.row__col--5 {
+  width: 20%;
+}
+
 @media only screen and (max-width: 800px) {
   p {
     font-size: 12px;

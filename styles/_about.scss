@@ -1,44 +1,45 @@
 .about {
     position: relative;
-    top: -180px;
+    top: -150px;
+    padding-bottom: 250px;
 
     p,
     h2 {
         color: $text-color2;
     }
 
-    #aboutLogo {
-        width: 250px;
-        padding-bottom: 60px;
-    }
-
     #aboutText {
         padding-right: 15vw;
     }
 }
-/*
-.gallery {
-
-
-    position: relative;
-    height: 500px;
-    width: 40vw;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    animation-name: galleryFade 5s infinite alternate;
-}*/
 
 #gallery1 {
-    display:none;
-    .top,
-    .bottom {
-        object-fit: cover;
-    }
-     position:absolute;
-  left:0;
-}
 
+    position: relative;
+
+    img {
+        filter: grayscale(90%);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: 500px;
+        width: 45vw;
+        position: absolute;
+        left: 0;
+        object-fit: cover;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+
+        &.top {
+            animation-name: galleryFade;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+            animation-direction: alternate;
+        }
+    }
+}
 
 @keyframes galleryFade {
     0% {
@@ -55,7 +56,3 @@
     }
 }
 
-.gallery img.top {
-    animation-name: galleryFade 5s infinite alternate;
-    transform: ease-in-out;
-}
