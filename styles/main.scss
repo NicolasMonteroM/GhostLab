@@ -19,6 +19,7 @@ $font: "Raleway", sans-serif;
 @import "cascade";
 @import "about";
 @import "ad";
+@import "newsLetter";
 
 p {
     font-size: 14px;
@@ -72,4 +73,5 @@ body {
 }
 
 @media only screen and(max-width: 350px) {
+    
 }
