@@ -463,13 +463,18 @@ input[type=button] {
   font-size: 14px;
   font-family: "Raleway", sans-serif;
   background-color: #f0f0f0;
-  padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 30px;
   padding-right: 30px;
   color: #000000;
   font-weight: 300;
   width: 300px;
+}
+
+@media only screen and (max-width: 500px) {
+  .imp {
+    width: 250px;
+  }
 }
 
 .cascade {
@@ -672,6 +677,7 @@ input[type=button] {
 }
 
 .ad #adText {
+  font-size: 14px;
   padding: 20px;
 }
 

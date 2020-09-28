@@ -2,12 +2,18 @@
     font-size: 14px;
     font-family: $font;
     background-color: darken(#ffffff, 6%);
-    padding-top: 13px;
     padding-bottom: 13px;
     padding-left: 30px;
     padding-right: 30px;
     color: $text-color1;
     font-weight: 300;
     width: 300px;
+}
+
+@media only screen and(max-width: 500px) {
+   
+    .imp{
+        width: 250px;
+    }
 }
 
