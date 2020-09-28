@@ -1,9 +1,38 @@
-.items {
-    .cards {
-        h1 {
+.cards {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    padding: 30px;
+    height: 1500px;
+    #item1,
+    #item2,
+    #item3 {
+        p,
+        h1,
+        h2 {
+            text-align: center;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            color: #292929;
+            padding: 10px;
         }
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        color: #292929;
+        padding: 10px;
+        position: relative;
+        padding: 30px;
+    }
+}
 
-        p {
-        }
+@media only screen and (max-width: 800px) {
+    .row__col--5 {
+        padding-top: 300px;
+        flex-direction: column;
     }
 }

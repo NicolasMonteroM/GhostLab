@@ -1,0 +1,41 @@
+table {
+    table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 40px;
+        width: 1000px;
+        table-layout: fixed;
+    }
+
+    #specifi {
+        position: relative;
+    }
+
+    td,
+    th {
+        color: white;
+        background-color: #292929;
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+        font-family: $font;
+    }
+
+    p,
+    h1,
+    h2 {
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        color: white;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #specifi {
+        margin-top: 100px;
+    }
+}

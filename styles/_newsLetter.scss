@@ -1,14 +1,22 @@
 .newsLetter {
+    position: relative;
     text-align: center;
     align-items: center;
     align-content: center;
     justify-content: center;
     color: $text-color2;
-    height: 60vh;
+    height: 120vh;
     display: flex;
-    padding-top: 20vh;
+    padding-top: 600px;
 
     &__content {
         align-self: center;
+    }
+}
+
+@media only screen and(max-width: 800px) {
+
+    .newsLetter{
+        padding-top: 400px;
     }
 }

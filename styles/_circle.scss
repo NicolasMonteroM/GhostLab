@@ -13,7 +13,7 @@
 }
 
 .description {
-    padding-top: 40vh;
+    padding-top: 800px;
     text-align: center;
     align-items: center;
     align-content: center;
@@ -42,13 +42,21 @@
     #title {
         padding-top: 100px;
         position: relative;
-        height: 200px;
+        height: 500px;
     }
 
     #moreInfo {
         width: 100vw;
         position: relative;
         padding: 30px;
+    }
+    
+    #lilCircle{
+        margin-top: 10px;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
     }
 }
 
@@ -70,6 +78,14 @@
 
     #moreInfo{
         text-align: left;
+    }
+
+    #product{
+        padding-top: 100px;
+    }
+
+    .description{
+        padding-top: 850px;
     }
 }
 
