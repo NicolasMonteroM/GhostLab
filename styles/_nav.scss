@@ -3,9 +3,13 @@
     width: 100%;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    justify-items: center;
     display: flex;
     flex-direction: column;
+
+    &__without{
+        display: flex;
+    }
 
     &__topline {
         height: 15px;
@@ -22,6 +26,7 @@
     }
 
     &__items {
+
         &--black {
             a {
                 color: black;
@@ -39,6 +44,7 @@
             font-size: 13px;
         }
 
+        display: flex;
         padding: 10px;
     }
 }

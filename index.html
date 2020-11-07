@@ -9,249 +9,186 @@
     <link rel="icon" href="./icons/logoGhost.ico">
 </head>
 
-<body>
+<body style="background-color:white;">
 
-    <div class="navbar">
-        <div class="navbar__topline navbar__topline--black"></div>
+    <section class="banner">
 
-        <div class="navbar__items navbar__items--black">
-            <a href="/index.html">About Us</a>
-            <a href="/products&services.html">Store</a>
-            <a href="/payment.html">Payment</a>
-            <a href="/signin.html">Sign In</a>
+        <div class="navbar">
+            <div class="navbar__topline navbar__topline--white"></div>
+
+            <div class="navbar__items navbar__items--white">
+                <a href="/home.html">About Us</a>
+                <a href="/index.html">Store</a>
+                <a href="/payment.html">Payment</a>
+
+                <div class="navbar__without hidden">
+                    <a href="/register.html">Sign Up</a>
+                    <a href="/login.html">Log In</a>
+                </div>
+
+                <a href="#" class="navbar__with hidden signout">
+                    Log out
+                </a>
+            </div>
+
         </div>
-    </div>
 
-    <section class=header>
 
-        <!-- circle -->
-        <div class='circle'>
-        </div>
+        <img class="banner__drops" src="./images/bannerDrops.png">
 
-        <!-- logo -->
-        <img id=logo src='./icons/GhostLab.svg'>
-
-        <p id=logoText>experimental tech solutions</p>
-
-        <p id=scrollText>Scroll down to see more</p>
     </section>
 
+    <h1>Products and Services</h1>
+    <!--
+    <aside>
+        <form class="filterform">
+            <label>
+                Ordenar por:
+                <select name="order">
+                    <option value="">Selecciona una opción</option>
+                    <option value="price_asc">Precio menor a mayor</option>
+                    <option value="price_desc">Precio mayor a menor</option>
+                </select>
+            </label>
 
-    <!-- making the drop cascade -->
-    <div class=cascade>
-        <div class=drop>
-            <img class=shortDrop src="./icons/shortDrop.svg">
-        </div>
-        <div class=drop>
-            <img class=tallDrop src="./icons/tallDrop.svg">
-        </div>
-        <div class=drop>
-            <img class=shortDrop src="./icons/shortDrop.svg">
-        </div>
-        <div class=drop>
-            <img class=tallDrop src="./icons/tallDrop.svg">
-        </div>
-        <div class=drop>
-            <img class=shortDrop src="./icons/shortDrop.svg">
-        </div>
-        <div class=drop>
-        </div>
-        <div class=drop>
-        </div>
-        <div class=drop>
-            <img class=shortDrop src="./icons/shortDrop.svg">
-        </div>
-        <div class=drop>
-            <img class=tallDrop src="./icons/tallDrop.svg">
-        </div>
-        <div class=drop>
-            <img class=shortDrop src="./icons/shortDrop.svg">
-        </div>
-        <div class=drop>
-            <img class=tallDrop src="./icons/tallDrop.svg">
-        </div>
-        <div class=drop>
-            <img class=shortDrop src="./icons/shortDrop.svg">
-        </div>
-        <div class=drop>
-        </div>
-    </div>
+            <h4>Filtrar por nombre:</h4>
+            <label>
+                <input type="radio" name="name" value="" checked>
+                Todos
+            </label>
+            <label>
+                <input type="radio" name="name" value="pariatur">
+                Pariatur
+            </label>
+            <label>
+                <input type="radio" name="name" value="sunt">
+                Sunt
+            </label>
+            <label>
+                <input type="radio" name="name" value="edit">
+                Edit
+            </label>
 
-    <section class=about>
-        <div class=row>
-            <div id=gallery1 class=row__col--2>
-                <img class=bottom src="./images/gallery2.jpg">
-                <img class=top src="./images/gallery1.jpg">
-            </div>
+            <br>
+            <label>
+                Productos menores a:
+                <input type="number" name="price">
+            </label>
+        </form>
+    </aside>
 
-            <div id=aboutText class=row__col--2>
-                <img id=aboutLogo src='./icons/whiteLogo.svg' width=250px>
-                <br>
-                <br>
-                <br>
-                <h2>
-                    WHAT WE DO
-                </h2>
-                <br>
-                <p>
-                    Our team at GHOST lab is always trying to push the limits of new and unconvetional technologies, to
-                    explore and define new ways to solve problems.
-                </p>
-                <br>
-                <p>
-                    From rumedintary works, to complex design systems. <b style="font-weight: 700"> We create solutions.
-                    </b></p>
-            </div>
-        </div>
-
-
-        <div class=row>
-            <div id=gallery2 class=row__col--2>
-                <img class=bottom src="./images/gallery3.jpg">
-                <img class=top src="./images/gallery4.jpg">
-            </div>
-
-            <div id=gallery3 class=row__col--2>
-                <img class=bottom src="./images/gallery5.jpg">
-                <img class=top src="./images/gallery6.jpg">
-            </div>
-        </div>
+    <section class="productslist margin">
     </section>
 
-    <section class=ad>
-        <p id=adText>This time, we are pleased to anounce our new experiment: <b style="font-weight: 700"> Figures </b>
-        </p>
-        <br>
-        <button class=btn>
-            CHECK IT
+    <form class="form form__margin hidden showadmin">
+        <h2 class="form__title">Nuevo producto</h2>
+
+        <label class="form__label margin">
+            Título
+            <input name="title" type="text">
+        </label>
+
+        <label class="form__label margin">
+            Imagen
+            <input name="image" type="url">
+        </label>
+
+        <label class="form__label margin">
+            Precio
+            <input name="price" type="number">
+        </label>
+
+        <div class="form__imginput">
+            <img src="" alt="" height="200px">
+            <input type="file">
+        </div>
+        <div class="form__imginput">
+            <img src="" alt="" height="200px">
+            <input type="file">
+        </div>
+        <div class="form__imginput">
+            <img src="" alt="" height="200px">
+            <input type="file">
+        </div>
+
+        <label>
+            <input type="checkbox" name="delivery" />
+            ¿Tiene envío gratis?
+        </label>
+
+
+        <button>
+            Guardar
         </button>
-    </section>
+    </form>
 
-    <section class=description>
-        <div id=intro>
-            <h1>Let's take a look</h1>
-            <br>
-            <p>at our new project.</p>
+
+    <input type="file" class="filemulti" multiple>
+
+
+-->
+
+    <div class="filters">
+
+
+        <h2>Price</h2>
+
+        <div class="filters__filter">
+            <input type="checkbox" name="filter" />
+            $0 - $1.000
+        </div>
+        <div class="filters__filter">
+            <input type="checkbox" name="filter" />
+            $0 - $1.000
+        </div>
+        <div class="filters__filter">
+            <input type="checkbox" name="filter" />
+            $0 - $1.000
+        </div>
+        <div class="filters__filter">
+            <input type="checkbox" name="filter" />
+            $0 - $1.000
         </div>
 
-        <div>
-            <div id=product class='circle'>
-            </div>
-        </div>
-
-        <div id=title>
-            <h2>The Circle (?)</h2>
-            <br>
-            <p>...yeah.</p>
-        </div>
-        <br>
-        <br>
-        <div id=moreInfo>
-            <p>The Circle is our new experiment. We decided to merge all the posible solutions for all your problems.
-                Literally.</p>
-            <br>
-            <p><b style="font-weight: 700">This thing can do everything.</b></p>
-        </div>
-        <section class=cards>
-            <div class=row>
-                <div id=item1 class=row__col--5>
-                    <div id=lilCircle class='circle'>
-                    </div>
-                    <h2>Easy use</h2>
-                    <p>Is just a circle</p>
-                </div>
-                <div id=item2 class=row__col--5>
-                    <div id=lilCircle class='circle'>
-                    </div>
-                    <h2>Does all your work</h2>
-                    <p>Even takes your son to school</p>
-                </div>
-                <div id=item3 class=row__col--5>
-                    <div id=lilCircle class='circle'>
-                    </div>
-                    <h2>Helps you staying productive</h2>
-                    <p>By doing it all by itself</p>
-                </div>
-            </div>
-        </section>
-        <table class=specifi>
-            <tr>
-                <th>100%</td>
-                <td>Productivity boost</td>
-            </tr>
-            <tr>
-                <th>200%</td>
-                <td>More productivity boost</td>
-            </tr>
-            <tr>
-                <th>300%</td>
-                <td>Ultimate productivity boost</td>
-            </tr>
-        </table>
-    </section>
-
-    <section class=newsLetter>
-        <div class=newsLetter__content>
-            <h2>Subscribe to our newsletter</h2>
-            <br>
-            <p>So we can keep you updated about our works</p>
-            <br>
-            <br>
-            <div id=mail>
-                <input class=imp>
-                <button id=inputBtn class=btn>Submit</button>
-            </div>
-        </div>
-
-    </section>
-
-    <section>
-        <div id=footerCascade class=cascade>
-            <div class=drop>
-                <img class=shortDropStill src="./icons/whiteShortDrop.svg">
-            </div>
-            <div class=drop>
-                <img class=tallDropStill src="./icons/whiteTallDrop.svg">
-            </div>
-            <div class=drop>
-                <img class=shortDropStill src="./icons/whiteShortDrop.svg">
-            </div>
-            <div class=drop>
-                <img class=tallDropStill src="./icons/whiteTallDrop.svg">
-            </div>
-            <div class=drop>
-                <img class=shortDropStill src="./icons/whiteShortDrop.svg">
-            </div>
-            <div class=drop>
-                <img class=tallDropStill src="./icons/whiteTallDrop.svg">
-            </div>
-            <div class=drop>
-                <img class=shortDropStill src="./icons/whiteShortDrop.svg">
-            </div>
-            <div class=drop>
-                <img class=tallDropStill src="./icons/whiteTallDrop.svg">
-            </div>
-            <div class=drop>
-                <img class=shortDropStill src="./icons/whiteShortDrop.svg">
-            </div>
-            <div class=drop>
-                <img class=tallDropStill src="./icons/whiteTallDrop.svg">
-            </div>
-            <div class=drop>
-                <img class=shortDropStill src="./icons/whiteShortDrop.svg">
-            </div>
-            <div class=drop>
-            </div>
-        </div>
-    </section>
-    <div>
-        <section class=footer>
-            <img src='./icons/GhostLab.svg' width=100px height=auto>
     </div>
+
+    <div class="filters">
+
+        <h2>Type of tech</h2>
+        <div class="filters__filter">
+            <input type="checkbox" name="filter" />
+            1
+        </div>
+        <div class="filters__filter">
+            <input type="checkbox" name="filter" />
+            2
+        </div>
+        <div class="filters__filter">
+            <input type="checkbox" name="filter" />
+            3
+        </div>
+        <div class="filters__filter">
+            <input type="checkbox" name="filter" />
+            4
+        </div>
+    </div>
+
+    <section class="footer">
+        <img class="footer__drops" src="./images/footerDrops.png">
+        <div class="footer__bg">
+            <img src='./icons/whiteLogo.svg' width=100px height=auto>
+        </div>
     </section>
 
-    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/auth.js"></script>
+    <script src="./scripts/login.js"></script>
+
+</body>
+
 </body>
 
 </html>

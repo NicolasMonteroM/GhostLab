@@ -3,10 +3,20 @@
 }
 
 .banner{
-
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 300px;
     width: 100vw;
     background-image: var(--darkgradient);
+
+    &__drops{
+        position: absolute;
+        bottom: 0;
+        width: 80%;
+
+    }
 
 }
 

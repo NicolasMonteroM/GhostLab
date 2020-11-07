@@ -9,10 +9,9 @@ login.addEventListener('submit', function (event) {
   firebase.auth().signInWithEmailAndPassword(email, password)
   .then(function () {
 
-    window.location.href = 'products&services.html';
+    window.location.href = 'index.html';
 
   })
-
   .catch(function(error) {
     // Handle Errors here.
     console.log(error)
