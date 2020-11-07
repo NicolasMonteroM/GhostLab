@@ -15,7 +15,8 @@
     font-weight: 900;
 
     &:hover {
-        background-image: var(--btnGradient);
+
+        border: 1px solid #CFD9EB !important;
         font-weight: 900;
     }
 

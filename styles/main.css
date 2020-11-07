@@ -510,7 +510,7 @@ input[type=button] {
 }
 
 .footer {
-  background-color: white;
+  background-image: white;
   height: 20vh;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -520,45 +520,6 @@ input[type=button] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.shortDropStill, .tallDropStill {
-  width: 27px;
-  height: auto;
-}
-
-.shortDropStill {
-  position: relative;
-  padding-top: 40px;
-}
-
-#footerCascade {
-  position: relative;
-  top: 50px;
-}
-
-@media only screen and (max-width: 800px) {
-  .shortDropStill, .tallDropStill {
-    width: 20px;
-  }
-  .shortDropStill {
-    padding-top: 15px;
-  }
-  #footerCascade {
-    top: 40px;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .tallDropStill {
-    top: 60px;
-  }
-  .shortDropStill {
-    padding-top: 15px;
-  }
-  #footerCascade {
-    top: 30px;
-  }
 }
 
 .navbar {
@@ -632,7 +593,7 @@ input[type=button] {
 }
 
 .btn:hover {
-  background-image: var(--btnGradient);
+  border: 1px solid #CFD9EB !important;
   font-weight: 900;
 }
 
@@ -698,6 +659,7 @@ table h2 {
   color: black;
   font-weight: 300;
   width: 300px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -1022,6 +984,85 @@ table h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 5vw;
+}
+
+.form {
+  position: relative;
+  left: 20vw;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  padding: 30px;
+}
+
+.form input {
+  font-size: 14px;
+  height: 30px;
+  font-family: "Raleway", sans-serif;
+  background-color: white;
+  color: black;
+  font-weight: 300;
+  width: 300px;
+  border: 1px solid black !important;
+}
+
+.form__btn {
+  font-weight: 700 !important;
+  width: 50%;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid black !important;
+  color: white;
+  font-weight: 900;
+}
+
+.form__btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.form__title {
+  margin-top: 0;
+  padding-bottom: 15px;
+}
+
+.form__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 15px;
+}
+
+.form__error {
+  padding-bottom: 15px;
+  color: red;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 800px) {
+  .form {
+    left: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 p {

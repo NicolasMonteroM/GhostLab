@@ -1,51 +1,7 @@
 .footer {
-    background-color: white;
+    background-image: white;
     height: 20vh;
     align-content: center;
     justify-content: center;
     display: flex;
-}
-
-.shortDropStill, .tallDropStill{
-    width: 27px;
-    height: auto;
-}
-
-.shortDropStill{
-    position: relative;
-    padding-top: 40px;
-}
-
-#footerCascade{
-    position: relative;
-    top: 50px;
-}
-
-@media only screen and(max-width: 800px) {
-    .shortDropStill, .tallDropStill {
-        width: 20px;
-    }
-
-    .shortDropStill{
-        padding-top: 15px;
-    }
-
-    #footerCascade{
-        top: 40px;
-    }
-}
-
-@media only screen and(max-width: 350px) {
-
-    .tallDropStill{
-        top: 60px;
-    }
-
-    .shortDropStill{
-        padding-top: 15px;
-    }
-
-    #footerCascade{
-        top: 30px;
-    }
 }

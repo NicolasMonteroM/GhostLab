@@ -20,6 +20,7 @@ $font: "Raleway", sans-serif;
 @import "newsLetter";
 @import "store";
 @import "home";
+@import "form";
 
 p {
     font-size: 14px;
@@ -53,6 +54,7 @@ body {
     font-family: $font;
     background-color: black;
 }
+
 
 .row {
     display: flex;
