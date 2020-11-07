@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="icon" href="./icons/logoGhost.ico">
 </head>
+
 <body style="background-color:white;">
     <div class="navbar">
         <div class="navbar__topline navbar__topline--black"></div>
@@ -22,30 +24,38 @@
 
     <form class="form login">
         <h2 class="form__title">Log In</h2>
-    
-        <label class="form__label">
-          Email
-          <input required type="email" name="email" />
-        </label>
-    
-        <label class="form__label">
-          Password
-          <input required type="password" name="password" />
-        </label>
-    
-        <p class="form__error hidden">
-          Incorrect log in information. 
-        </p>
-    
-        <button class="form__btn" type="submit">
-          Enter
-        </button>
-      </form>
 
-      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
-      <script src="./scripts/firebase.js"></script>
-      <script src="./scripts/login.js"></script>
-    
+        <label class="form__label">
+            Email
+            <input required type="email" name="email" />
+        </label>
+
+        <label class="form__label">
+            Password
+            <input required type="password" name="password" />
+        </label>
+
+        <p class="form__error hidden">
+            Incorrect log in information.
+        </p>
+
+        <button class="form__btn" type="submit">
+            Enter
+        </button>
+    </form>
+
+    <div class="footer">
+        <img class="footer__drops" src="./images/footerDrops.png">
+        <div class="footer__bg">
+            <img src='./icons/whiteLogo.svg' width=100px height=auto>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/login.js"></script>
+
 </body>
+
 </html>

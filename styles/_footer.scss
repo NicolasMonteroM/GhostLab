@@ -1,7 +1,24 @@
 .footer {
-    background-image: white;
-    height: 20vh;
-    align-content: center;
-    justify-content: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
+    height: 100%;
+
+    &__drops{
+        width: 80%;
+
+    }
+
+    &__bg{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 100%;
+        background-color: black;
+    }
+   
 }

@@ -510,16 +510,38 @@ input[type=button] {
 }
 
 .footer {
-  background-image: white;
-  height: 20vh;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+  position: relative;
+  height: 100%;
+}
+
+.footer__drops {
+  width: 80%;
+}
+
+.footer__bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+  width: 100%;
+  background-color: black;
 }
 
 .navbar {
@@ -1094,6 +1116,7 @@ input {
 }
 
 body {
+  min-height: 100vh;
   font-family: "Raleway", sans-serif;
   background-color: black;
 }
