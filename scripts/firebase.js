@@ -1,6 +1,6 @@
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyBpNIQND9MIwKsat8tTWTaQYKqC0K0u5Ng",
     authDomain: "ghost-lab-web.firebaseapp.com",
     databaseURL: "https://ghost-lab-web.firebaseio.com",
@@ -12,4 +12,3 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();

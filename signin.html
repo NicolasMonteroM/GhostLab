@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="icon" href="./icons/logoGhost.ico">
 </head>
+
 <body style="background-color:white;">
     <div class="navbar">
         <div class="navbar__topline navbar__topline--black"></div>
@@ -16,8 +18,57 @@
             <a href="/products&services.html">Store</a>
             <a href="/payment.html">Payment</a>
             <a href="/signin.html">Sign In</a>
+            <a href="/login.html">Log In</a>
         </div>
     </div>
-    
+
+    <form class="form register">
+        <h2 class="form__title">Sign In</h2>
+
+        <label class="form__label">
+            Name
+            <input required type="text" name="firstname" />
+        </label>
+
+        <label class="form__label">
+            Last Name
+            <input required type="text" name="lastname" />
+        </label>
+
+        <label class="form__label">
+            Phone Number
+            <input required type="text" name="phone" />
+        </label>
+
+        <label class="form__label">
+            Email
+            <input required type="email" name="email" />
+        </label>
+
+        <label class="form__label">
+            Password
+            <input required type="password" name="password" />
+        </label>
+
+        <p class="form__error hidden">
+            Ya existe un usuario registrado con este correo.
+        </p>
+
+        <button class="form__btn" type="submit">
+            Continue
+        </button>
+    </form>
+
+    <section class="footer">
+
+        
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/register.js"></script>
+
 </body>
+
 </html>
