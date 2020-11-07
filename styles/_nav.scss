@@ -1,0 +1,44 @@
+.navbar {
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    &__topline {
+        height: 15px;
+
+        &--black {
+            background-color: black;
+        }
+
+        &--white {
+            background-color: white;
+        }
+
+        width: 100%;
+    }
+
+    &__items {
+        &--black {
+            a {
+                color: black;
+            }
+        }
+
+        &--white {
+            a {
+                color: white;
+            }
+        }
+
+        a {
+            padding: 15px;
+            font-size: 13px;
+        }
+
+        padding: 10px;
+    }
+}

@@ -561,6 +561,56 @@ input[type=button] {
   }
 }
 
+.navbar {
+  position: absolute;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navbar__topline {
+  height: 15px;
+  width: 100%;
+}
+
+.navbar__topline--black {
+  background-color: black;
+}
+
+.navbar__topline--white {
+  background-color: white;
+}
+
+.navbar__items {
+  padding: 10px;
+}
+
+.navbar__items--black a {
+  color: black;
+}
+
+.navbar__items--white a {
+  color: white;
+}
+
+.navbar__items a {
+  padding: 15px;
+  font-size: 13px;
+}
+
 :root {
   --btnGradient: linear-gradient(60deg, #636363,  #363636);
 }
@@ -950,6 +1000,30 @@ table h2 {
   }
 }
 
+:root {
+  --darkgradient: linear-gradient(60deg, #363636,  #636363);
+}
+
+.banner {
+  height: 300px;
+  width: 100vw;
+  background-image: var(--darkgradient);
+}
+
+.filters {
+  padding: 15px;
+  height: 100%;
+  width: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 5vw;
+}
+
 p {
   font-size: 14px;
   font-family: "Raleway", sans-serif;
@@ -959,7 +1033,7 @@ p {
 a {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  color: black;
+  text-decoration: none;
 }
 
 h1 {
@@ -974,8 +1048,13 @@ h2 {
   font-weight: 700;
 }
 
+input {
+  font-family: "Raleway", sans-serif;
+}
+
 body {
-  background-color: #000000;
+  font-family: "Raleway", sans-serif;
+  background-color: black;
 }
 
 .row {

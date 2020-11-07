@@ -18,6 +18,8 @@ $font: "Raleway", sans-serif;
 @import "about";
 @import "ad";
 @import "newsLetter";
+@import "store";
+@import "home";
 
 p {
     font-size: 14px;
@@ -28,7 +30,7 @@ p {
 a {
     font-family: $font;
     font-weight: 700;
-    color: $text-color1;
+    text-decoration: none;
 }
 
 h1{
@@ -43,8 +45,13 @@ h2 {
     font-weight: 700;
 }
 
+input{
+    font-family: $font;
+}
+
 body {
-    background-color: #000000;
+    font-family: $font;
+    background-color: black;
 }
 
 .row {

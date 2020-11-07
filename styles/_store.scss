@@ -1,0 +1,23 @@
+:root {
+    --darkgradient: linear-gradient(60deg, #363636,  #636363);
+}
+
+.banner{
+
+    height: 300px;
+    width: 100vw;
+    background-image: var(--darkgradient);
+
+}
+
+.filters{
+
+    padding: 15px;
+    height: 100%;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+
+}
+
