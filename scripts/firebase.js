@@ -1,14 +1,12 @@
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBpNIQND9MIwKsat8tTWTaQYKqC0K0u5Ng",
-  authDomain: "ghost-lab-web.firebaseapp.com",
-  databaseURL: "https://ghost-lab-web.firebaseio.com",
-  projectId: "ghost-lab-web",
-  storageBucket: "ghost-lab-web.appspot.com",
-  messagingSenderId: "804738528862",
-  appId: "1:804738528862:web:1b9feb34bb38f6bccc26cf",
-  measurementId: "G-797KE015T2"
+var firebaseConfig = {
+  apiKey: "AIzaSyDdGKuBMc4XI1jd6XGMiqdjiKPvAkF6Yh8",
+  authDomain: "ghostlab-20741.firebaseapp.com",
+  databaseURL: "https://ghostlab-20741.firebaseio.com",
+  projectId: "ghostlab-20741",
+  storageBucket: "ghostlab-20741.appspot.com",
+  messagingSenderId: "723420444280",
+  appId: "1:723420444280:web:81841f678a95d931729f8d",
+  measurementId: "G-F0E5YMQ97Z"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
