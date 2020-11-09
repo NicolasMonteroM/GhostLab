@@ -10,21 +10,43 @@
 </head>
 
 <body style="background-color:white;">
-    <div class="navbar">
-        <div class="navbar__topline navbar__topline--white"></div>
 
-        <div class="navbar__items navbar__items--white">
+    <div class="navbar">
+        <div class="navbar__topline navbar__topline--black"></div>
+
+        <div class="navbar__items navbar__items--black">
             <a href="/home.html">About Us</a>
             <a href="/index.html">Store</a>
             <a href="/payment.html">Payment</a>
-            <a href="/register.html">Sign Up</a>
-            <a href="/login.html">Log In</a>
+
+            <div class="navbar__without hidden">
+                <a href="/register.html">Sign Up</a>
+                <a href="/login.html">Log In</a>
+            </div>
+
+            <a href="#" class="navbar__with hidden signout">
+                Log out
+            </a>
         </div>
     </div>
 
+    <article class="details">
+
+        <h1>El producto</h1>
+
+        <img style= "background-image: url(${elem.img});">
+
+        <h2><span>$ 600.000</span></h2>
+    </article>
+
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
     <script src="./scripts/firebase.js"></script>
-    <script src="./scripts/product.js"></script>
+    <script src="./scripts/auth.js"></script>
+    <script src="./scripts/selectedproduct.js"></script>
+
 </body>
+
 </html>

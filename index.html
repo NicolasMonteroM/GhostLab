@@ -38,139 +38,95 @@
 
     </section>
 
-    <h1>Products and Services</h1>
-    <!--
-    <aside>
-        <form class="filterform">
-            <label>
-                Ordenar por:
-                <select name="order">
-                    <option value="">Selecciona una opción</option>
-                    <option value="price_asc">Precio menor a mayor</option>
-                    <option value="price_desc">Precio mayor a menor</option>
-                </select>
-            </label>
+    <h1 class="maintitle">Products and Services</h1>
 
-            <h4>Filtrar por nombre:</h4>
-            <label>
-                <input type="radio" name="name" value="" checked>
-                Todos
-            </label>
-            <label>
-                <input type="radio" name="name" value="pariatur">
-                Pariatur
-            </label>
-            <label>
-                <input type="radio" name="name" value="sunt">
-                Sunt
-            </label>
-            <label>
-                <input type="radio" name="name" value="edit">
-                Edit
-            </label>
+    <form class="form hidden showadmin">
+        <h2 class="form__title">New product</h2>
 
-            <br>
-            <label>
-                Productos menores a:
-                <input type="number" name="price">
-            </label>
-        </form>
-    </aside>
-
-    <section class="productslist margin">
-    </section>
-
-    <form class="form form__margin hidden showadmin">
-        <h2 class="form__title">Nuevo producto</h2>
-
-        <label class="form__label margin">
-            Título
-            <input name="title" type="text">
+        <label class="form__label">
+            Name
+            <input name="title" type="text" placeholder="What's its name?">
         </label>
 
-        <label class="form__label margin">
-            Imagen
-            <input name="image" type="url">
+        <label class="form__label">
+            Price
+            <input name="price" type="number" placeholder="How much does it costs?">
         </label>
 
-        <label class="form__label margin">
-            Precio
-            <input name="price" type="number">
+        <label class="form__label">
+            Description
+            <input name="info" type="text" placeholder="Describe the product">
         </label>
 
-        <div class="form__imginput">
-            <img src="" alt="" height="200px">
-            <input type="file">
-        </div>
-        <div class="form__imginput">
-            <img src="" alt="" height="200px">
-            <input type="file">
-        </div>
-        <div class="form__imginput">
-            <img src="" alt="" height="200px">
-            <input type="file">
-        </div>
-
-        <label>
-            <input type="checkbox" name="delivery" />
-            ¿Tiene envío gratis?
+        <label class="form__label">
+            Type of tech
+            <input name="tech" type="text" placeholder="What's the tech of this, good human?">
         </label>
 
+        <br>
+        <strong>Product images</strong>
 
-        <button>
+        <label class="form__label">
+            <input class="fileUpload filemulti" name="image" type="file" placeholder="Upload photos">
+        </label>
+
+        <button class="form__btn">
             Guardar
         </button>
     </form>
 
+    <div class="store">
+        <div class="stickymenu">
+            <div class="filters">
 
-    <input type="file" class="filemulti" multiple>
+                <h2>Price</h2>
 
+                <div class="filters__filter">
+                    <input type="checkbox" name="filter" />
+                    $0 - $1.000
+                </div>
+                <div class="filters__filter">
+                    <input type="checkbox" name="filter" />
+                    $0 - $1.000
+                </div>
+                <div class="filters__filter">
+                    <input type="checkbox" name="filter" />
+                    $0 - $1.000
+                </div>
+                <div class="filters__filter">
+                    <input type="checkbox" name="filter" />
+                    $0 - $1.000
+                </div>
 
--->
+            </div>
+            <div>
+                <div class="filters">
+                    <h2>Type of tech</h2>
+                    <div class="filters__filter">
+                        <input type="checkbox" name="filter" />
+                        1
+                    </div>
+                    <div class="filters__filter">
+                        <input type="checkbox" name="filter" />
+                        2
+                    </div>
+                    <div class="filters__filter">
+                        <input type="checkbox" name="filter" />
+                        3
+                    </div>
+                    <div class="filters__filter">
+                        <input type="checkbox" name="filter" />
+                        4
+                    </div>
+                </div>
 
-    <div class="filters">
+            </div>
 
-
-        <h2>Price</h2>
-
-        <div class="filters__filter">
-            <input type="checkbox" name="filter" />
-            $0 - $1.000
         </div>
-        <div class="filters__filter">
-            <input type="checkbox" name="filter" />
-            $0 - $1.000
-        </div>
-        <div class="filters__filter">
-            <input type="checkbox" name="filter" />
-            $0 - $1.000
-        </div>
-        <div class="filters__filter">
-            <input type="checkbox" name="filter" />
-            $0 - $1.000
-        </div>
 
-    </div>
+        <section class="products">
+        </section>
 
-    <div class="filters">
-
-        <h2>Type of tech</h2>
-        <div class="filters__filter">
-            <input type="checkbox" name="filter" />
-            1
-        </div>
-        <div class="filters__filter">
-            <input type="checkbox" name="filter" />
-            2
-        </div>
-        <div class="filters__filter">
-            <input type="checkbox" name="filter" />
-            3
-        </div>
-        <div class="filters__filter">
-            <input type="checkbox" name="filter" />
-            4
-        </div>
     </div>
 
     <section class="footer">
@@ -181,11 +137,12 @@
     </section>
 
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
     <script src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js"></script>
-    <script src="./scripts/login.js"></script>
+    <script src="./scripts/products.js"></script>
 
 </body>
 

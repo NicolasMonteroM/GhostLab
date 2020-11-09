@@ -1,8 +1,8 @@
 :root {
-    --darkgradient: linear-gradient(60deg, #363636,  #636363);
+    --darkgradient: linear-gradient(60deg, #363636, #636363);
 }
 
-.banner{
+.banner {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -11,23 +11,106 @@
     width: 100vw;
     background-image: var(--darkgradient);
 
-    &__drops{
+    &__drops {
         position: absolute;
         bottom: 0;
         width: 80%;
+    }
+}
 
+.store {
+    position: relative;
+    top: 150px;
+    display: flex;
+    margin-bottom: 200px;
+}
+
+@media only screen and(max-width: 800px) {
+    .store {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        align-content: center;
     }
 
+    .stickymenu {
+        position: relative;
+        width: 100%;
+        top: none;
+        left: 0;
+
+        &__filters {
+
+        }
+    }
+    
+
+    .products {
+        margin: 5vw;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .maintitle {
+        left: 0;
+        text-align: center;
+        width: 100vw;
+    }
 }
 
-.filters{
-
-    padding: 15px;
+.stickymenu {
+    position: sticky;
+    width: 20%;
+    left: 60px;
     height: 100%;
-    width: 30vw;
+    top: 60px;
+    display: column;
+
+}
+
+.filters {
+    padding: 30px;
+    position: relative;
+    width: 20%;
     display: flex;
     flex-direction: column;
-    padding-left: 5vw;
-
 }
 
+.products {
+    padding: 10px;
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__info {
+        width: 300px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__img {
+        height: 400px;
+        width: 300px;
+        object-fit: cover;
+    }
+
+    &__things {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        position: relative;
+        display: flex;
+        width: 100%;
+    }
+
+    &__title {
+        color: black;
+        font-weight: 700;
+    }
+
+    &__price {
+        color: #31a8ff;
+        position: absolute;
+        right: 0;
+    }
+}

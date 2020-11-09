@@ -1,18 +1,25 @@
 .form {
 
     position: relative;
-    left: 20vw;
+    left: 20%;
     top: 100px;
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     width: 400px;
     padding: 30px;
 
+    .fileUpload{
+
+        border: 1px solid white !important;
+        left: 0px;
+        
+    }
+
     input{
 
         font-size: 14px;
+        padding:20px;
         height:30px;
         font-family: $font;
         background-color: white;
@@ -58,7 +65,7 @@
     }
 
     &__error {
-        padding-bottom: 15px;
+
         color: red;
         font-weight: 700;
     }
@@ -70,6 +77,14 @@
 
         left: 0;
         align-items: center;
+        width: 100vw;
+        padding: 30px;
+        justify-content: center;
+        
+        input{
+            width:80vw;
+
+        }
 
     }
 }

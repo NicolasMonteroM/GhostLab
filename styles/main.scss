@@ -56,6 +56,19 @@ body {
     background-color: black;
 }
 
+
+.maintitle{
+    
+    position: relative;
+    left: 20vw;
+    top: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 30px;
+}
+
 .hidden{
 
     display: none;
@@ -85,10 +98,18 @@ body {
 
 @media only screen and(max-width: 800px) {
     p {
-        font-size: 12px;
+        font-size: 15px;
         
+    }
+
+    .maintitle{
+        left: 0;
+        text-align: center;
+        width: 100vw;
+
     }
 }
 
 @media only screen and(max-width: 350px) {
 }
+
