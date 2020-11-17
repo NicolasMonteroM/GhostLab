@@ -26,11 +26,21 @@ firebase.auth().onAuthStateChanged(function (user) {
           const showAdmin = document.querySelectorAll('.showadmin');
           showAdmin.forEach(function (elem) {
             elem.classList.remove('hidden');
+            
+          });
+
+          const showUser = document.querySelectorAll('.showuser');
+          showUser.forEach(function (elem) {
+            elem.classList.add('hidden');
           });
         }
       }
     });
-  } 
+  } else {
+    // si no existe quiere decir que no ha iniciado sesión o acaba de cerrar sesión
+    authWith.classList.add('hidden');
+    authWithout.classList.remove('hidden');
+  }
 });
 
 // cerrar sesión

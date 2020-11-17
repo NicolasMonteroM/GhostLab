@@ -1,5 +1,5 @@
 :root {
-    --darkgradient: linear-gradient(60deg, #363636, #636363);
+    --darkgradient: linear-gradient(60deg, #151515, #2d2d2d);
 }
 
 .banner {
@@ -15,6 +15,16 @@
         position: absolute;
         bottom: 0;
         width: 80%;
+        animation: bannerAnimation 3s infinite alternate;
+    }
+}
+
+@keyframes bannerAnimation {
+    0% {
+        bottom: -40px;
+    }
+    100% {
+        bottom: -10px;
     }
 }
 
@@ -29,26 +39,33 @@
     .store {
         flex-direction: column;
         align-items: center;
-        width: 100%;
         align-content: center;
-    }
 
-    .stickymenu {
-        position: relative;
-        width: 100%;
-        top: none;
-        left: 0;
+        .stickymenu {
+            display: flex;
+            flex-direction: row;
+            position: unset !important;
+            top: 0;
+            width: 100%;
+            left: 0px;
 
-        &__filters {
+            .filters {
+                width: 50vw;
 
+                h2 {
+                    width: 100%;
+                }
+
+                &__filter {
+                    width: 100%;
+                }
+            }
         }
-    }
-    
 
-    .products {
-        margin: 5vw;
-        align-content: center;
-        justify-content: center;
+        .products {
+            align-content: center;
+            justify-content: center;
+        }
     }
 
     .maintitle {
@@ -60,28 +77,60 @@
 
 .stickymenu {
     position: sticky;
+    display: flex;
     width: 20%;
     left: 60px;
     height: 100%;
     top: 60px;
-    display: column;
-
+    flex-direction: column;
 }
 
 .filters {
+    h2 {
+        padding-bottom: 20px;
+    }
+
+    span ~ span {
+        padding-left: 10px;
+    }
+
+    &__filter {
+        display: flex;
+        padding: 5px 5px;
+    }
+
+    padding: 15px;
     padding: 30px;
     position: relative;
-    width: 20%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .products {
-    padding: 10px;
+    margin: 10px;
     position: relative;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
+
+    &__addToBag {
+        position: fixed;
+        bottom: 40;
+    }
+
+    &__preview {
+        position: relative;
+        display: flex-end;
+        flex-direction: column;
+
+        .icon {
+            fill: white;
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+        }
+    }
 
     &__info {
         width: 300px;

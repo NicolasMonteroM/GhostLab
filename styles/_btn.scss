@@ -3,6 +3,11 @@
 }
 
 .btn {
+
+    a {
+        color: white;
+    }
+
     font-weight: 700 !important;
     font-size: 14px;
     font-family: $font;
@@ -16,6 +21,11 @@
     font-weight: 900;
 
     &:hover {
+        
+        a {
+            color: black;
+        }
+
         background-color: white;
         color: black;
     }

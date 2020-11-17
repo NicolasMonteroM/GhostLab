@@ -40,8 +40,9 @@
 
     <h1 class="maintitle">Products and Services</h1>
 
-    <form class="form hidden showadmin">
-        <h2 class="form__title">New product</h2>
+    <form class="form form__margin hidden showadmin" id="formdiv">
+        <h2 class="form__title hidden"> New product </h2>
+        <h2 class="form__title hidden edit"> Edit </h2>
 
         <label class="form__label">
             Name
@@ -63,12 +64,22 @@
             <input name="tech" type="text" placeholder="What's the tech of this, good human?">
         </label>
 
+        <label class="form__label">
+            More info
+            <textarea name="largeInfo" type="text" placeholder="Tell me more about it" rows="4"></textarea>
+        </label>
+
         <br>
         <strong>Product images</strong>
 
         <label class="form__label">
             <input class="fileUpload filemulti" name="image" type="file" placeholder="Upload photos">
         </label>
+
+        <p>*Esta opción está creando una ruta falsa (C:/fakepath/) que no permitirá la correcta lectura de la imagen por
+            el navegador.
+        </p>
+        <br>
 
         <button class="form__btn">
             Guardar
@@ -77,50 +88,66 @@
 
     <div class="store">
         <div class="stickymenu">
-            <div class="filters">
+
+            <form class="filters">
+
+                <h2>Sort by</h2>
+
+                <label class="filters__filter">
+                    <select name="order">
+                        <option value="">Default</option>
+                        <option value="price_asc">Lower to higher</a>
+                        <option value="price_desc">Higher to lower</a>
+                    </select>
+                </label>
+
 
                 <h2>Price</h2>
 
+                <label class="filters__filter">
+                    <span><input type="radio" name="pricefilter" value="1000" /></span>
+                    <span> Below $1.000 </span>
+                </label>
+
+
+                <label class="filters__filter">
+                    <span><input type="radio" name="pricefilter" value="10000" /></span>
+                    <span> $1.000 - $10.000 </span>
+                </label>
+
+                <label class="filters__filter">
+                    <span><input type="radio" name="pricefilter" value="50000"/></span>
+                    <span> $10.000 - $50.000 </span>
+                </label>
+
+                <label class="filters__filter"> 
+                    <span><input type="radio" name="pricefilter" value="100000" /></span>
+                    <span> $50.000 and above </span>
+                </label>
+
+<!--
+
+                <h2>Type of tech</h2>
+
                 <div class="filters__filter">
-                    <input type="checkbox" name="filter" />
-                    $0 - $1.000
+                    <span><input type="checkbox" name="filter" /></span>
+                    <span> 1 </span>
                 </div>
                 <div class="filters__filter">
-                    <input type="checkbox" name="filter" />
-                    $0 - $1.000
+                    <span><input type="checkbox" name="filter" /></span>
+                    <span> 2 </span>
                 </div>
                 <div class="filters__filter">
-                    <input type="checkbox" name="filter" />
-                    $0 - $1.000
+                    <span><input type="checkbox" name="filter" /></span>
+                    <span> 3 </span>
                 </div>
                 <div class="filters__filter">
-                    <input type="checkbox" name="filter" />
-                    $0 - $1.000
+                    <span><input type="checkbox" name="filter" /></span>
+                    <span> 4 </span>
                 </div>
 
-            </div>
-            <div>
-                <div class="filters">
-                    <h2>Type of tech</h2>
-                    <div class="filters__filter">
-                        <input type="checkbox" name="filter" />
-                        1
-                    </div>
-                    <div class="filters__filter">
-                        <input type="checkbox" name="filter" />
-                        2
-                    </div>
-                    <div class="filters__filter">
-                        <input type="checkbox" name="filter" />
-                        3
-                    </div>
-                    <div class="filters__filter">
-                        <input type="checkbox" name="filter" />
-                        4
-                    </div>
-                </div>
-
-            </div>
+                -->
+            </form>
 
         </div>
 

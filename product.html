@@ -31,13 +31,28 @@
     </div>
 
     <article class="details">
+        <div class="details__info">
+            <h1></h1>
+            <p class="details__shortInfo"></p>
+            <p class="details__longInfo"></p>
+            <h2 class="details__price"><span></span></h2>
 
-        <h1>El producto</h1>
+            <button class="details__addToBag showuser">
+                Add to cart
+            </button>
+        </div>
 
-        <img style= "background-image: url(${elem.img});">
-
-        <h2><span>$ 600.000</span></h2>
+        <div class="details__imgPrev">
+            <img src=""/>
+        </div>
     </article>
+
+    <section class="footer">
+        <img class="footer__drops" src="./images/footerDrops.png">
+        <div class="footer__bg">
+            <img src='./icons/whiteLogo.svg' width=100px height=auto>
+        </div>
+    </section>
 
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>

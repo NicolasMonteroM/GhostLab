@@ -1,5 +1,4 @@
 .form {
-
     position: relative;
     left: 20%;
     top: 100px;
@@ -9,18 +8,31 @@
     width: 400px;
     padding: 30px;
 
-    .fileUpload{
-
+    .fileUpload {
         border: 1px solid white !important;
         left: 0px;
-        
     }
 
-    input{
-
+    input {
         font-size: 14px;
-        padding:20px;
-        height:30px;
+        padding: 20px;
+        height: 30px;
+        font-family: $font;
+        background-color: white;
+        color: black;
+        font-weight: 300;
+        width: 300px;
+        border: 1px solid black !important;
+
+        &:focus {
+            outline: none;
+            border: 1px solid #31a8ff !important;
+        }
+    }
+
+    textarea {
+        font-size: 14px;
+        padding: 20px;
         font-family: $font;
         background-color: white;
         color: black;
@@ -29,7 +41,7 @@
         border: 1px solid black !important;
     }
 
-    &__btn{
+    &__btn {
         font-weight: 700 !important;
         width: 50%;
         font-size: 14px;
@@ -42,14 +54,11 @@
         border: 1px solid black !important;
         color: white;
         font-weight: 900;
-    
-        &:hover {
 
+        &:hover {
             background-color: white;
             color: black;
-            
         }
-
     }
 
     &__title {
@@ -61,30 +70,24 @@
         display: flex;
         flex-direction: column;
         padding-bottom: 15px;
-        
     }
 
     &__error {
-
         color: red;
         font-weight: 700;
     }
 }
 
 @media only screen and(max-width: 800px) {
-
-    .form{
-
+    .form {
         left: 0;
         align-items: center;
         width: 100vw;
         padding: 30px;
         justify-content: center;
-        
-        input{
-            width:80vw;
 
+        input {
+            width: 80vw;
         }
-
     }
 }
