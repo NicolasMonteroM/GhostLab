@@ -564,7 +564,7 @@ input[type=button] {
           flex-direction: column;
 }
 
-.navbar__without {
+.navbar__without, .navbar__with {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1135,6 +1135,7 @@ table h2 {
 
 .filters h2 {
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .filters span ~ span {
@@ -1233,6 +1234,15 @@ table h2 {
 .form .fileUpload {
   border: 1px solid white !important;
   left: 0px;
+}
+
+.form__radiobtn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  width: 70px;
 }
 
 .form input {
@@ -1416,6 +1426,69 @@ table h2 {
   .details__imgPrev {
     left: 0%;
     position: relative;
+  }
+}
+
+.shopingBag {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 100px;
+  left: 20%;
+  width: 400px;
+  padding: 30px;
+}
+
+.bagProducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bagProducts__things {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.bagProducts__info {
+  padding: 15px;
+}
+
+.bagProducts__price {
+  font-size: 15px;
+  font-weight: 700;
+  color: #31a8ff;
+  position: absolute;
+  right: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .shopingBag {
+    left: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bagProducts {
+    width: 100vw;
+    padding: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="icon" href="./icons/logoGhost.ico">
 </head>
+
 <body style="background-color:white;">
     <div class="navbar">
         <div class="navbar__topline navbar__topline--black"></div>
@@ -14,18 +16,55 @@
         <div class="navbar__items navbar__items--black">
             <a href="/home.html">About Us</a>
             <a href="/index.html">Store</a>
-            <a href="/payment.html">Payment</a>
 
             <div class="navbar__without hidden">
                 <a href="/register.html">Sign Up</a>
                 <a href="/login.html">Log In</a>
             </div>
 
-            <a href="#" class="navbar__with hidden signout">
-                Log out
-            </a>
+            <div class="navbar__with hidden">
+
+                <a href="/shopingBag.html">Shoping Bag</a>
+                <a href="#" class="signout">Log out</a>
+
+            </div>
         </div>
     </div>
-    
+
+    <section class="shopingBag">
+
+        <h1 class="shopingBag__title">Shoping bag</h1>
+        <div class="bagProducts">
+        </div>
+
+        <div>
+            <h1 class="shopingBag__title Total"></h1>
+        </div>
+
+        <a href="/payment.html">
+            <button class="shopingBag__btn btn checkout" type="submit">
+                Checkout
+            </button>
+        </a>
+
+    </section>
+
+    <section class="footer">
+        <img class="footer__drops" src="./images/footerDrops.png">
+        <div class="footer__bg">
+            <img src='./icons/whiteLogo.svg' width=100px height=auto>
+        </div>
+    </section>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/auth.js"></script>
+    <script src="./scripts/shopingBag.js"></script>
+
 </body>
+
 </html>

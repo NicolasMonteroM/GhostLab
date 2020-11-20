@@ -19,6 +19,7 @@
             <div class="navbar__without hidden">
                 <a href="/register.html">Sign Up</a>
                 <a href="/login.html">Log In</a>
+
             </div>
 
             <a href="#" class="navbar__with hidden signout">
@@ -26,6 +27,71 @@
             </a>
         </div>
     </div>
+
+    <form class="form checkout">
+        <h2 class="form__title">Mailing info</h2>
+
+        <label class="form__label">
+            Name
+            <input required type="text" name="name" />
+        </label>
+
+        <label class="form__label">
+            Last Name
+            <input required type="text" name="lastname" />
+        </label>
+
+        <label class="form__label">
+            Email
+            <input required type="email" name="email" />
+        </label>
+        <br>
+
+        <h2 class="form__title">Payment Method</h2>
+
+        <label class="form__radiobtn">
+            <input type="radio"/>Credit
+        </label>
+
+        <label class="form__radiobtn"> 
+            <input type="radio"/>Debit
+        </label>
+        <br>
+
+        <h2 class="form__title">Payment Details</h2>
+
+        <label class="form__label">
+            Card Number
+            <input required type="text" name="name" />
+        </label>
+
+        <label class="form__label">
+            Address
+            <input required type="text" name="lastname" />
+        </label>
+
+        <a href="/index.html">
+            <button class="form__btn payment" type="submit">
+                Enter
+            </button>
+
+        </a>
+
+    </form>
+
+    <section class="footer">
+        <img class="footer__drops" src="./images/footerDrops.png">
+        <div class="footer__bg">
+            <img src='./icons/whiteLogo.svg' width=100px height=auto>
+        </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/auth.js"></script>
     
 </body>
 </html>

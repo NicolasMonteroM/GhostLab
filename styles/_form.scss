@@ -13,6 +13,14 @@
         left: 0px;
     }
 
+    &__radiobtn{
+        position: relative;
+        display:flex;
+        left: 0;
+        width:70px;
+        
+    }
+
     input {
         font-size: 14px;
         padding: 20px;

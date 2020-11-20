@@ -9,7 +9,7 @@ const productsList = document.querySelector('.products');
 let selectedItem = null;
 const imagePath = [];
 
-// creación de nuevos productos a partir de la lista
+
 function renderProducts(list) {
     productsList.innerHTML = '';
     list.forEach(function (elem) {
@@ -41,8 +41,8 @@ function renderProducts(list) {
             </div>
    
             <div>
-                <button class="products__delete btn hidden showadmin">Eliminar</button>
-                <button class="products__edit btn hidden showadmin"><a href="#formdiv">Editar</a></button>
+                <button class="products__delete btn hidden showadmin">Delete</button>
+                <button class="products__edit btn hidden showadmin"><a href="#formdiv">Edit</a></button>
             </div>
         </div>
         `;
@@ -62,23 +62,16 @@ function renderProducts(list) {
         // seleccionamos el botón "Eliminar" que se acaba de crear en este elemento
         const deleteBtn = newProduct.querySelector('.products__delete');
         deleteBtn.addEventListener('click', function () {
-            //  loader.classList.add('loader--show');
-            productsRef // referencia de la colección
-                .doc(elem.id) // referencia de un documento específico en esa colección
-                .delete() // elimine el documento asociado a esa referencia
-                .then(function () {
-                    // debería entrar si todo sale bien
+
+            productsRef.doc(elem.id).delete().then(function () {
                     console.log("Document successfully deleted!");
-                    getProducts(); // traiga los productos cuando estemos seguros de que ya eliminó el que le dijimos
+                    getProducts();
                 })
                 .catch(function (error) {
-                    // debería entrar si ocurre algún error
                     console.error("Error removing document: ", error);
                 });
         });
 
-        // seleccionar el botón de editar
-        // al hacer click al botón de editar
         const editBtn = newProduct.querySelector('.products__edit');
         editBtn.addEventListener('click', function () {
             form.title.value = elem.title;
@@ -98,7 +91,7 @@ function renderProducts(list) {
 
             firebase.auth().onAuthStateChanged(function (user) {
                 if (user) {
-                    const newWishRef = bagRef.doc();
+                    const bagProductRef = bagRef.doc();
                     const bagProduct = {
                         title: elem.title,
                         info: elem.info,
@@ -108,7 +101,7 @@ function renderProducts(list) {
      
                     }
 
-                    newWishRef.set(bagProduct);
+                    bagProductRef.set(bagProduct);
                 }
             });
         });
@@ -135,10 +128,8 @@ function getProducts() {
         });
 }
 
-// render inicial con todos los productos
 getProducts();
 
-//Aqui es donde agregamos un producto
 const form = document.querySelector('.form');
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -154,7 +145,6 @@ form.addEventListener('submit', function (event) {
     };
 
     function handleThen(docRef) {
-        // console.log("Document written with ID: ", docRef.id);
         getProducts();
         form.title.value = '';
         form.price.value = '';
@@ -170,36 +160,25 @@ form.addEventListener('submit', function (event) {
     }
 
     if (selectedItem) {
-        // si existe selectedItem quiere decir que va a editar
-        productsRef
-            .doc(selectedItem.id) // seleccione el documento con ese id
-            .set(newProduct) // sobreescriba la información existente
-            .then(handleThen)
-            .catch(handleCatch);
+        productsRef.doc(selectedItem.id).set(newProduct).then(handleThen).catch(handleCatch);
 
     } else {
-        // si no existe es porque es un nuevo producto
-        productsRef // referencia de la colección
-            .add(newProduct) // cree un nuevo elemento en la colección
-            .then(handleThen)
-            .catch(handleCatch);
+        productsRef.add(newProduct).then(handleThen).catch(handleCatch);
     }
 });
 
-// input file single, repeated
 const images = form.querySelectorAll('.form__imginput');
 images.forEach(function (group, index) {
     const input = group.querySelector('input');
     const img = group.querySelector('img');
     input.addEventListener('change', function () {
 
-        // Create a reference to 'mountains.jpg'
         var newImageRef = storageRef.child(`products/${Math.floor(Math.random() * 999999999)}.jpg`);
 
-        var file = input.files[0]; // use the Blob or File API
+        var file = input.files[0];
 
         var reader = new FileReader();
-        reader.readAsDataURL(file); // convert to base64 string
+        reader.readAsDataURL(file);
         reader.onload = function (e) {
             img.src = e.target.result;
         }
@@ -212,7 +191,6 @@ images.forEach(function (group, index) {
     });
 });
 
-// input file multiple
 const fileMulti = document.querySelector('.filemulti');
 fileMulti.addEventListener('change', function () {
 
@@ -260,6 +238,17 @@ filterForm.addEventListener('input', function () {
             }
             return false;
         });
+    }
+
+    const techfilter = filterForm.techfilter.value;
+  
+    if (techfilter != '') {
+      copy = copy.filter(function (elem) {
+        if (elem.title.toLowerCase().includes(techfilter)) {
+          return true;
+        }
+        return false;
+      });
     }
 
     renderProducts(copy);

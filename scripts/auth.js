@@ -9,7 +9,6 @@ var userInfo;
 firebase.auth().onAuthStateChanged(function (user) {
 
   if (user) {
-    // si el usuario existe quiere decir que inició sesión, se registró o ya tenía sesión iniciada
 
     console.log(user);
     authWith.classList.remove('hidden');
@@ -37,13 +36,11 @@ firebase.auth().onAuthStateChanged(function (user) {
       }
     });
   } else {
-    // si no existe quiere decir que no ha iniciado sesión o acaba de cerrar sesión
     authWith.classList.add('hidden');
     authWithout.classList.remove('hidden');
   }
 });
 
-// cerrar sesión
 authSignout.addEventListener('click', function (event) {
 
   console.log("aaaaaaaaa")
