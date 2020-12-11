@@ -1600,6 +1600,10 @@ table h2 {
   }
 }
 
+#interaction {
+  background-color: black;
+}
+
 p {
   font-size: 14px;
   font-family: "Raleway", sans-serif;
