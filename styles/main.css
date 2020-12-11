@@ -546,6 +546,32 @@ input[type=button] {
   background-color: black;
 }
 
+@-webkit-keyframes toInteractionAnimation {
+  0% {
+    bottom: 25px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+
+@keyframes toInteractionAnimation {
+  0% {
+    bottom: 25px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+
+.toInteraction {
+  fill: white;
+  position: absolute;
+  bottom: 10px;
+  -webkit-animation: toInteractionAnimation 1s infinite alternate;
+          animation: toInteractionAnimation 1s infinite alternate;
+}
+
 .navbar {
   position: absolute;
   width: 100%;
@@ -562,6 +588,20 @@ input[type=button] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.navbar__underline {
+  background-image: var(--darkgradient);
+  background-image: linear-gradient(120deg, #a7a7a7 0%, #ebebeb 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0px;
+  background-position: 0 100%;
+  -webkit-transition: background-size 0.25s ease-in;
+  transition: background-size 0.25s ease-in;
+}
+
+.navbar__underline:hover {
+  background-size: 100% 88%;
 }
 
 .navbar__logo {
@@ -631,19 +671,6 @@ input[type=button] {
 .navbar__items a {
   padding: 15px;
   font-size: 13px;
-}
-
-.underline {
-  background-image: linear-gradient(120deg, #a7a7a7 0%, #ebebeb 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0px;
-  background-position: 0 100%;
-  -webkit-transition: background-size 0.25s ease-in;
-  transition: background-size 0.25s ease-in;
-}
-
-.underline:hover {
-  background-size: 100% 88%;
 }
 
 @media only screen and (max-width: 800px) {

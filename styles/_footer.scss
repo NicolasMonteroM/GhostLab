@@ -8,13 +8,11 @@
     height: 100%;
     bottom: 0;
 
-    &__drops{
+    &__drops {
         width: 80%;
-
     }
 
-    &__bg{
-
+    &__bg {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -22,6 +20,21 @@
         width: 100%;
         background-color: black;
     }
-   
 }
 
+@keyframes toInteractionAnimation {
+    0% {
+        bottom: 25px;
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+
+.toInteraction {
+    fill: white;
+    position: absolute;
+    bottom: 10px;
+
+    animation: toInteractionAnimation 1s infinite alternate;
+}
