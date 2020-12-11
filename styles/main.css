@@ -1327,7 +1327,7 @@ table h2 {
   position: relative;
   left: 20%;
   top: 100px;
-  height: 100%;
+  height: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1399,6 +1399,17 @@ table h2 {
 .form__btn:hover {
   background-color: white;
   color: black;
+}
+
+.form__btn--white {
+  background-color: white;
+  border: 1px solid white !important;
+  color: black;
+}
+
+.form__btn--white:hover {
+  background-color: black;
+  color: white;
 }
 
 .form__title {
@@ -1602,6 +1613,42 @@ table h2 {
 
 #interaction {
   background-color: black;
+}
+
+.interactionForm {
+  position: relative;
+  left: 20%;
+  top: 100px;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  padding: 30px;
+}
+
+.interactionForm__btn {
+  font-weight: 700 !important;
+  width: 50%;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 900;
+  background-color: white;
+  border: 1px solid white !important;
+  color: black;
+}
+
+.interactionForm__btn:hover {
+  background-color: black;
+  color: white;
 }
 
 p {
