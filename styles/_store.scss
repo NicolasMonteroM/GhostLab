@@ -28,9 +28,18 @@
     }
 }
 
+@keyframes addTextAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .store {
     position: relative;
-    top: 150px;
+    top: 100px;
     display: flex;
     margin-bottom: 200px;
 }
@@ -115,9 +124,23 @@
     display: flex;
     flex-wrap: wrap;
 
+    opacity: 1;
+
     &__addToBag {
         position: fixed;
         bottom: 40;
+    }
+
+    &__addText {
+        color: white;
+        position: absolute;
+        right: 40px;
+        text-align: right;
+        opacity: 0;
+
+        &:hover {
+            animation: addTextAnimation 1s infinite alternate ease-in-out;
+        }
     }
 
     &__preview {

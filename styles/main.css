@@ -510,7 +510,7 @@ input[type=button] {
 }
 
 .footer {
-  position: relative;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -564,6 +564,23 @@ input[type=button] {
           flex-direction: column;
 }
 
+.navbar__logo {
+  position: absolute;
+  left: 0;
+  padding: 8px;
+  width: 180px;
+  height: auto;
+  padding-left: 35px;
+}
+
+.navbar__logo--white {
+  fill: white;
+}
+
+.navbar__logo--black {
+  fill: black;
+}
+
 .navbar__without, .navbar__with {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,7 +604,11 @@ input[type=button] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px;
+  padding: 15px;
+}
+
+.navbar__items--black {
+  fill: black;
 }
 
 .navbar__items--black a {
@@ -601,6 +622,12 @@ input[type=button] {
 .navbar__items a {
   padding: 15px;
   font-size: 13px;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar__logo {
+    display: none;
+  }
 }
 
 :root {
@@ -1046,9 +1073,27 @@ table h2 {
   }
 }
 
+@-webkit-keyframes addTextAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes addTextAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .store {
   position: relative;
-  top: 150px;
+  top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1158,11 +1203,25 @@ table h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  opacity: 1;
 }
 
 .products__addToBag {
   position: fixed;
   bottom: 40;
+}
+
+.products__addText {
+  color: white;
+  position: absolute;
+  right: 40px;
+  text-align: right;
+  opacity: 0;
+}
+
+.products__addText:hover {
+  -webkit-animation: addTextAnimation 1s infinite alternate ease-in-out;
+          animation: addTextAnimation 1s infinite alternate ease-in-out;
 }
 
 .products__preview {
@@ -1529,7 +1588,7 @@ body {
 .maintitle {
   position: relative;
   left: 20vw;
-  top: 100px;
+  top: 80px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
