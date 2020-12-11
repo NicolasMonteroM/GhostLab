@@ -611,17 +611,39 @@ input[type=button] {
   fill: black;
 }
 
-.navbar__items--black a {
+.navbar__items--black a,
+.navbar__items--black span {
+  font-weight: 700;
   color: black;
 }
 
-.navbar__items--white a {
+.navbar__items--white a,
+.navbar__items--white span {
+  font-weight: 700;
   color: white;
+}
+
+.navbar__items--white a:hover,
+.navbar__items--white span:hover {
+  color: black;
 }
 
 .navbar__items a {
   padding: 15px;
   font-size: 13px;
+}
+
+.underline {
+  background-image: linear-gradient(120deg, #a7a7a7 0%, #ebebeb 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0px;
+  background-position: 0 100%;
+  -webkit-transition: background-size 0.25s ease-in;
+  transition: background-size 0.25s ease-in;
+}
+
+.underline:hover {
+  background-size: 100% 88%;
 }
 
 @media only screen and (max-width: 800px) {
